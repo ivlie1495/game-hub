@@ -8,7 +8,7 @@ import SearchInput from './SearchInput';
 
 const Navbar = () => {
   return (
-    <HStack padding="10px">
+    <HStack padding={5}>
       <Link to="/">
         <Image src={logo} boxSize="60px" objectFit="cover" />
       </Link>
