@@ -1,10 +1,10 @@
 import ms from 'ms';
 import { useQuery } from '@tanstack/react-query';
 
-import genres from '../data/genres';
-import Genre from '../entities/Genre';
+import genres from '@data/genres';
+import Genre from '@entities/Genre';
 
-import API from '../services/api';
+import API from '@services/api';
 
 const api = new API<Genre>('/genres');
 

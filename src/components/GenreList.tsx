@@ -8,9 +8,9 @@ import {
   Spinner,
 } from '@chakra-ui/react';
 
-import useGenres from '../hooks/useGenres';
-import getCroppedImageUrl from '../utils/image';
-import useGameQuery from '../stores/gameQueryStore';
+import useGenres from '@hooks/useGenres';
+import useGameQuery from '@stores/gameQueryStore';
+import getCroppedImageUrl from '@utils/image';
 
 const GenreList = () => {
   const { data, error, isLoading } = useGenres();

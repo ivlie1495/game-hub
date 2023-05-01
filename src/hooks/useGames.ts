@@ -1,10 +1,10 @@
 import ms from 'ms';
 import { useInfiniteQuery } from '@tanstack/react-query';
 
-import Game from '../entities/Game';
-import useGameQuery from '../stores/gameQueryStore';
+import Game from '@entities/Game';
 
-import API, { Response } from '../services/api';
+import API, { Response } from '@services/api';
+import useGameQuery from '@stores/gameQueryStore';
 
 const api = new API<Game>('/games');
 
