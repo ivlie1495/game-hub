@@ -3,6 +3,7 @@ import { useInfiniteQuery } from '@tanstack/react-query';
 
 import { Platform } from './usePlatforms';
 import API, { Response } from '../services/api';
+import useGameQuery from '../stores/gameQueryStore';
 
 export interface Game {
   id: number;
@@ -13,17 +14,12 @@ export interface Game {
   rating_top: number;
 }
 
-export interface GameQuery {
-  genreId?: number;
-  platformId?: number;
-  sortOrder: string;
-  searchText: string;
-}
-
 const api = new API<Game>('/games');
 
-const useGames = (gameQuery: GameQuery) =>
-  useInfiniteQuery<Response<Game>, Error>({
+const useGames = () => {
+  const gameQuery = useGameQuery((state) => state.gameQuery);
+
+  return useInfiniteQuery<Response<Game>, Error>({
     queryKey: ['games', gameQuery],
     queryFn: ({ pageParam = 1 }) =>
       api.getList({
@@ -40,5 +36,6 @@ const useGames = (gameQuery: GameQuery) =>
     },
     staleTime: ms('24h'),
   });
+};
 
 export default useGames;
