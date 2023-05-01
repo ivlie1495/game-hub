@@ -22,7 +22,7 @@ const GameGrid = () => {
         dataLength={totalItems}
         hasMore={!!hasNextPage}
         next={() => fetchNextPage()}
-        loader={<Spinner />}
+        loader={<Spinner marginTop={2} />}
       >
         <SimpleGrid columns={{ sm: 1, md: 2, lg: 3, xl: 4 }} spacing={6}>
           {isLoading &&
