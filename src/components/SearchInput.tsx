@@ -12,7 +12,6 @@ const SearchInput = () => {
 
   return (
     <form
-      style={{ width: '100%' }}
       onSubmit={(e) => {
         e.preventDefault();
 
