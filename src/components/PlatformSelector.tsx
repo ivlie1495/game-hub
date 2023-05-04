@@ -3,13 +3,13 @@ import { Button, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
 
 import usePlatforms from '../hooks/usePlatforms';
 import usePlatform from '../hooks/usePlatform';
-import useGameQuery from '@stores/gameQueryStore';
+import useGameQueryStore from '@stores/gameQueryStore';
 
 const PlatformSelector = () => {
   const { data, error } = usePlatforms();
 
-  const setPlatformId = useGameQuery((state) => state.setPlatformId);
-  const selectedPlatformId = useGameQuery(
+  const setPlatformId = useGameQueryStore((state) => state.setPlatformId);
+  const selectedPlatformId = useGameQueryStore(
     (state) => state.gameQuery.platformId
   );
   const platform = usePlatform(selectedPlatformId);

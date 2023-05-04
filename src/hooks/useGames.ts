@@ -4,12 +4,12 @@ import { useInfiniteQuery } from '@tanstack/react-query';
 import Game from '@entities/Game';
 
 import API, { Response } from '@services/api';
-import useGameQuery from '@stores/gameQueryStore';
+import useGameQueryStore from '@stores/gameQueryStore';
 
 const api = new API<Game>('/games');
 
 const useGames = () => {
-  const gameQuery = useGameQuery((state) => state.gameQuery);
+  const gameQuery = useGameQueryStore((state) => state.gameQuery);
 
   return useInfiniteQuery<Response<Game>, Error>({
     queryKey: ['games', gameQuery],

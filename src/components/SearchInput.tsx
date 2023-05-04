@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { BsSearch } from 'react-icons/bs';
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 
-import useGameQuery from '@stores/gameQueryStore';
+import useGameQueryStore from '@stores/gameQueryStore';
 
 const SearchInput = () => {
   const ref = useRef<HTMLInputElement>(null);
-  const setSearchText = useGameQuery((state) => state.setSearchText);
+  const setSearchText = useGameQueryStore((state) => state.setSearchText);
   const navigate = useNavigate();
 
   return (
