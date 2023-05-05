@@ -1,20 +1,20 @@
-import { Fragment } from 'react';
-import InfiniteScroll from 'react-infinite-scroll-component';
-import { Box, SimpleGrid, Spinner, Text } from '@chakra-ui/react';
+import { Fragment } from 'react'
+import InfiniteScroll from 'react-infinite-scroll-component'
+import { Box, SimpleGrid, Spinner, Text } from '@chakra-ui/react'
 
-import useGames from '@hooks/useGames';
+import useGames from '@hooks/useGames'
 
-import GameCard from './GameCard';
-import GameCardSkeleton from './GameCardSkeleton';
-import GameCardContainer from './GameCardContainer';
+import GameCard from './GameCard'
+import GameCardSkeleton from './GameCardSkeleton'
+import GameCardContainer from './GameCardContainer'
 
 const GameGrid = () => {
-  const { data, error, isLoading, fetchNextPage, hasNextPage } = useGames();
+  const { data, error, isLoading, fetchNextPage, hasNextPage } = useGames()
 
-  if (error) return <Text>{error.message}</Text>;
+  if (error) return <Text>{error.message}</Text>
 
   const totalItems =
-    data?.pages.reduce((total, page) => total + page.results.length, 0) || 0;
+    data?.pages.reduce((total, page) => total + page.results.length, 0) || 0
 
   return (
     <Box padding={2}>
@@ -45,7 +45,7 @@ const GameGrid = () => {
         </SimpleGrid>
       </InfiniteScroll>
     </Box>
-  );
-};
+  )
+}
 
-export default GameGrid;
+export default GameGrid

@@ -4,6 +4,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
@@ -12,4 +13,4 @@ module.exports = {
     'react-refresh/only-export-components': 'warn',
     'react-hooks/exhaustive-deps': 'off',
   },
-};
+}

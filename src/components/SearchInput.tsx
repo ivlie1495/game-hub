@@ -1,23 +1,23 @@
-import { useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { BsSearch } from 'react-icons/bs';
-import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
+import { useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { BsSearch } from 'react-icons/bs'
+import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react'
 
-import useGameQueryStore from '@stores/gameQueryStore';
+import useGameQueryStore from '@stores/gameQueryStore'
 
 const SearchInput = () => {
-  const ref = useRef<HTMLInputElement>(null);
-  const setSearchText = useGameQueryStore((state) => state.setSearchText);
-  const navigate = useNavigate();
+  const ref = useRef<HTMLInputElement>(null)
+  const setSearchText = useGameQueryStore((state) => state.setSearchText)
+  const navigate = useNavigate()
 
   return (
     <form
       onSubmit={(e) => {
-        e.preventDefault();
+        e.preventDefault()
 
         if (ref.current) {
-          setSearchText(ref.current.value);
-          navigate('/');
+          setSearchText(ref.current.value)
+          navigate('/')
         }
       }}
     >
@@ -33,7 +33,7 @@ const SearchInput = () => {
         />
       </InputGroup>
     </form>
-  );
-};
+  )
+}
 
-export default SearchInput;
+export default SearchInput

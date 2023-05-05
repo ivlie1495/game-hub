@@ -6,23 +6,23 @@ import {
   List,
   ListItem,
   Spinner,
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'
 
-import useGenres from '@hooks/useGenres';
-import useGameQueryStore from '@stores/gameQueryStore';
-import getCroppedImageUrl from '@utils/image';
+import useGenres from '@hooks/useGenres'
+import useGameQueryStore from '@stores/gameQueryStore'
+import getCroppedImageUrl from '@utils/image'
 
 const GenreList = () => {
-  const { data, error, isLoading } = useGenres();
-  const selectedGenreId = useGameQueryStore((state) => state.gameQuery.genreId);
-  const setGenreId = useGameQueryStore((state) => state.setGenreId);
+  const { data, error, isLoading } = useGenres()
+  const selectedGenreId = useGameQueryStore((state) => state.gameQuery.genreId)
+  const setGenreId = useGameQueryStore((state) => state.setGenreId)
 
   if (error) {
-    return null;
+    return null
   }
 
   if (isLoading) {
-    return <Spinner />;
+    return <Spinner />
   }
 
   return (
@@ -55,7 +55,7 @@ const GenreList = () => {
         ))}
       </List>
     </>
-  );
-};
+  )
+}
 
-export default GenreList;
+export default GenreList

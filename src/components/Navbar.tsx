@@ -1,10 +1,10 @@
-import { Link } from 'react-router-dom';
-import { Box, HStack, Image } from '@chakra-ui/react';
+import { Link } from 'react-router-dom'
+import { Box, HStack, Image } from '@chakra-ui/react'
 
-import logo from '@assets/logo.webp';
+import logo from '@assets/logo.webp'
 
-import ColorModeSwitch from './ColorModeSwitch';
-import SearchInput from './SearchInput';
+import ColorModeSwitch from './ColorModeSwitch'
+import SearchInput from './SearchInput'
 
 const Navbar = () => {
   return (
@@ -17,7 +17,7 @@ const Navbar = () => {
       </Box>
       <ColorModeSwitch />
     </HStack>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

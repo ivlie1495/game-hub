@@ -156,4 +156,4 @@ export default {
         'https://media.rawg.io/media/games/1db/1dbc3d0c9de2709e21326cdcb91468ae.jpg',
     },
   ],
-};
+}

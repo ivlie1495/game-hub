@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom';
-import { Card, CardBody, HStack, Heading, Image } from '@chakra-ui/react';
+import { Link } from 'react-router-dom'
+import { Card, CardBody, HStack, Heading, Image } from '@chakra-ui/react'
 
-import Game from '@entities/Game';
-import getCroppedImageUrl from '@utils/image';
+import Game from '@entities/Game'
+import getCroppedImageUrl from '@utils/image'
 
-import PlatformIconList from './PlatformIconList';
-import CriticScore from './CriticScore';
-import Emoji from './Emoji';
+import PlatformIconList from './PlatformIconList'
+import CriticScore from './CriticScore'
+import Emoji from './Emoji'
 
 interface Props {
-  game: Game;
+  game: Game
 }
 
 const GameCard = ({ game }: Props) => {
@@ -29,7 +29,7 @@ const GameCard = ({ game }: Props) => {
         <Emoji rating={game.rating_top} />
       </CardBody>
     </Card>
-  );
-};
+  )
+}
 
-export default GameCard;
+export default GameCard

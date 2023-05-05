@@ -1,9 +1,9 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom'
 
-import Layout from './pages/Layout';
-import ErrorPage from './pages/ErrorPage';
-import HomePage from './pages/HomePage';
-import GameDetailPage from './pages/GameDetailPage';
+import Layout from './pages/Layout'
+import ErrorPage from './pages/ErrorPage'
+import HomePage from './pages/HomePage'
+import GameDetailPage from './pages/GameDetailPage'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +15,6 @@ const router = createBrowserRouter([
       { path: 'games/:slug', element: <GameDetailPage /> },
     ],
   },
-]);
+])
 
-export default router;
+export default router

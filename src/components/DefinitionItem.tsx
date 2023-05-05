@@ -1,9 +1,9 @@
-import { ReactNode } from 'react';
-import { Box, Heading } from '@chakra-ui/react';
+import { ReactNode } from 'react'
+import { Box, Heading } from '@chakra-ui/react'
 
 interface Props {
-  term: string;
-  children: ReactNode | ReactNode[];
+  term: string
+  children: ReactNode | ReactNode[]
 }
 
 const DefinitionItem = ({ term, children }: Props) => {
@@ -14,7 +14,7 @@ const DefinitionItem = ({ term, children }: Props) => {
       </Heading>
       <dd>{children}</dd>
     </Box>
-  );
-};
+  )
+}
 
-export default DefinitionItem;
+export default DefinitionItem

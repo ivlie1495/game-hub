@@ -1,7 +1,7 @@
-import { BsChevronDown } from 'react-icons/bs';
-import { Button, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react';
+import { BsChevronDown } from 'react-icons/bs'
+import { Button, Menu, MenuButton, MenuItem, MenuList } from '@chakra-ui/react'
 
-import useGameQueryStore from '@stores/gameQueryStore';
+import useGameQueryStore from '@stores/gameQueryStore'
 
 const SortSelector = () => {
   const sortOrders = [
@@ -11,13 +11,11 @@ const SortSelector = () => {
     { value: '-released', label: 'Release date' },
     { value: '-metacritic', label: 'Popularity' },
     { value: '-rating', label: 'Average rating' },
-  ];
+  ]
 
-  const setSortOrder = useGameQueryStore((state) => state.setSortOrder);
-  const sortOrder = useGameQueryStore((state) => state.gameQuery.sortOrder);
-  const currentSortOrder = sortOrders.find(
-    (order) => order.value === sortOrder
-  );
+  const setSortOrder = useGameQueryStore((state) => state.setSortOrder)
+  const sortOrder = useGameQueryStore((state) => state.gameQuery.sortOrder)
+  const currentSortOrder = sortOrders.find((order) => order.value === sortOrder)
 
   return (
     <Menu>
@@ -32,7 +30,7 @@ const SortSelector = () => {
         ))}
       </MenuList>
     </Menu>
-  );
-};
+  )
+}
 
-export default SortSelector;
+export default SortSelector

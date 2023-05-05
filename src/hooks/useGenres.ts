@@ -1,12 +1,12 @@
-import ms from 'ms';
-import { useQuery } from '@tanstack/react-query';
+import ms from 'ms'
+import { useQuery } from '@tanstack/react-query'
 
-import genres from '@data/genres';
-import Genre from '@entities/Genre';
+import genres from '@data/genres'
+import Genre from '@entities/Genre'
 
-import API from '@services/api';
+import API from '@services/api'
 
-const api = new API<Genre>('/genres');
+const api = new API<Genre>('/genres')
 
 const useGenres = () =>
   useQuery({
@@ -14,6 +14,6 @@ const useGenres = () =>
     queryFn: api.getAll,
     staleTime: ms('24h'),
     initialData: genres,
-  });
+  })
 
-export default useGenres;
+export default useGenres

@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom'
 
 import {
   GridItem,
@@ -6,22 +6,22 @@ import {
   SimpleGrid,
   Spinner,
   VStack,
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'
 
-import ExpandableText from '@components/ExpandableText';
-import GameAttributes from '@components/GameAttributes';
-import GameTrailer from '@components/GameTrailer';
-import GameScreenshots from '@components/GameScreenshots';
+import ExpandableText from '@components/ExpandableText'
+import GameAttributes from '@components/GameAttributes'
+import GameTrailer from '@components/GameTrailer'
+import GameScreenshots from '@components/GameScreenshots'
 
-import useGame from '@hooks/useGame';
+import useGame from '@hooks/useGame'
 
 const GameDetailPage = () => {
-  const { slug } = useParams();
-  const { data: game, isLoading, error } = useGame(slug || '');
+  const { slug } = useParams()
+  const { data: game, isLoading, error } = useGame(slug || '')
 
-  if (isLoading) return <Spinner />;
+  if (isLoading) return <Spinner />
 
-  if (error || !game) throw error;
+  if (error || !game) throw error
 
   return (
     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5}>
@@ -37,7 +37,7 @@ const GameDetailPage = () => {
         </VStack>
       </GridItem>
     </SimpleGrid>
-  );
-};
+  )
+}
 
-export default GameDetailPage;
+export default GameDetailPage
