@@ -13,7 +13,7 @@ export interface Response<T> {
 const api = axios.create({
   baseURL: 'https://api.rawg.io/api',
   params: {
-    key: 'dfcc832e69594acf9eacb5ffbded13e4',
+    key: import.meta.env.VITE_API_KEY,
   },
 })
 
